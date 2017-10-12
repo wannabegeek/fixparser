@@ -1,0 +1,52 @@
+{
+  "name": "fix-parser",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://wittydeveloper/typescript-npm-module-bootstrap.git"
+  },
+  "main": "dist/index.js",
+  "typings": "definitions/index",
+  "typescript": {
+    "definition": "definitions/index"
+  },
+  "scripts": {
+    "clean": "rm -rf dist compiled",
+    "watch": "tsc -p src -w",
+    "prepublishOnly": "npm run build",
+    "build": "npm run clean && tsc -p tsconfig.json",
+    "lint": "tslint src/**/*.ts",
+    "test": "karma start --single-run",
+    "test-o": "karma start"
+  },
+  "description": "Simple Parser for FIX messages ",
+  "engineStrict": true,
+  "devDependencies": {
+    "@types/es6-shim": "^0.31.32",
+    "@types/jasmine": "^2.6.0",
+    "@types/node": "~6.0.46",
+    "es6-shim": "^0.35.3",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-jasmine": "^2.4.2",
+    "gulp-typescript": "^3.1.3",
+    "jasmine-core": "^2.8.0",
+    "karma": "^1.7.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-mocha-reporter": "^2.2.4",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-typescript": "^3.0.6",
+    "merge2": "^1.2.0",
+    "protractor": "^5.1.2",
+    "run-sequence": "^2.2.0",
+    "tslint": "^5.7.0",
+    "typescript": "^2.5.2"
+  },
+  "author": "Charly POLY <hello@charlypoly.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/assert": "0.0.31",
+    "@types/es6-shim": "^0.31.32"
+  }
+}

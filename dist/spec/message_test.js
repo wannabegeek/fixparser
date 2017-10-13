@@ -2,10 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var FixParser_1 = require("../lib/FixParser");
 var FixContext_1 = require("../lib/FixContext");
-var FidessaFix44Dictionary_1 = require("../lib/FidessaFix44Dictionary");
+var Fix44Dictionary_1 = require("../lib/Fix44Dictionary");
 describe('add', function () {
-    var testMessage = "8=FIX.4.4|9=122|35=D|34=215|49=CLIENT12|52=20100225-19:41:57.316|56=B|1=Marcel|11=13346|21=1|40=2|44=5|54=1|59=0|60=20100225-19:39:52.020|10=072|";
-    var dictionary = FidessaFix44Dictionary_1.FidessaFIX44Dictionary;
+    var testMessage = "8=FIX.4.4^A9=1327^A35=8^A34=883^A49=FID_UAB_LON_OES^A56=BARC_UAB_LON_OES^A43=N^A52=20170925-09:11:14.123^A453=7^A448=sarvakam^A447=D^A452=11^A802=3^A523=sarvakam^A803=2^A523=BarCapFutures.FETServAP^A803=24^A523=SG^A803=25^A448=QAClient^A447=D^A452=3^A802=1^A523=1234561^A803=3^A448=QAAgency^A447=D^A452=24^A802=5^A523=QACLIENTAGENCY^A803=19^A523=12345643^A803=3^A523=123Client^A803=100^A523=123Client^A803=28^A523=A^A803=26^A448=BPLC^A447=D^A452=7^A448=sarvakam^A447=D^A452=39^A448=13571113^A447=P^A452=3^A448=2000581^A447=P^A452=12^A10=121^A";
+    var dictionary = Fix44Dictionary_1.FIX44Dictionary;
     it('should sum given numbers', function () {
         var ctx = FixParser_1.FixParser.parse(testMessage, dictionary);
         console.log(logger(ctx, 0));
